@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Font family */
+  --ff: "Poppins", sans-serif;
+
+  /* Colors */
+  --clr-primary: #bc4123;
+  --clr-secondary: #2b3452;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  color-scheme: dark;
+  font-size: 100%;
+}
+
+p {
+  margin-block: 20px;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  background-color: var(--clr-primary);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 10px;
+  cursor: pointer;
+
+  transition: transform 200ms ease-in-out;
+}
+
+button:where(:hover, :focus) {
+  transform: scale(1.02);
+}
+
+body {
+  background-color: var(--clr-secondary);
+  font-family: var(--ff);
+  padding: 20px;
+}
+
+/* Navbar styles */
+header nav {
+  max-width: 1200px;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+
+header nav h1 {
+  border-bottom: 3px solid var(--clr-primary);
+  margin-right: auto;
+}
+
+header nav a {
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+
+header nav a.active {
+  background-color: var(--clr-primary);
+}
+
+/* Page content styles */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* Help layout styles */
+.help-layout nav {
+  margin-block: 30px;
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.help-layout nav a {
+  border: 2px solid #fff;
+  border-radius: 4px;
+  padding: 10px 12px;
+
+  transition: border-color 200ms ease-in-out;
+}
+
+.help-layout nav a:where(:hover, :focus-visible) {
+  border-color: var(--clr-primary);
+}
+
+.help-layout nav a.active {
+  background-color: var(--clr-primary);
+}
+
+/* FAQs page styles */
+.faq .question {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 5px 20px;
+  margin-block: 20px;
+}
+
+/* Contact page styles */
+.contact form {
+  margin-top: 30px;
+}
+
+.contact form :where(label, input, textarea) {
+  display: block;
+}
+
+.contact form label {
+  margin-bottom: 10px;
+}
+
+.contact form :where(input, textarea) {
+  width: 300px;
+  background-color: #f0f0f0;
+  color: var(--clr-secondary);
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 30px;
+}
+
+.contact form textarea {
+  resize: vertical;
+}
+
+/* Careers list styles */
+.careers > a {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 20px;
+  margin-block: 20px;
+}
+
+.careers > a > p {
+  margin-block: 0;
+
+  transition: color 200ms ease-in-out;
+}
+
+.careers > a > p:last-child {
+  color: #bbb;
+  font-size: 0.8em;
+}
+
+.careers > a:where(:hover, :focus-visible) > p {
+  color: var(--clr-primary);
+}
+
+/* Career details styles */
+.career-details {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 20px;
+  margin-block: 20px;
+}
+
+/* Careers Route Error styles */
+.careers-error h2 {
+  color: var(--clr-primary);
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+}
+
+.careers-error a {
+  border-bottom: 2px solid var(--clr-primary);
+}
+
+/* Breadcrumbs styles */
+.breadcrumbs {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.breadcrumbs {
+  display: flex;
+  gap: 10px;
+}
+
+.breadcrumbs .crumb {
+  color: #ddd;
+  text-transform: uppercase;
+}
+
+.breadcrumbs .crumb::after {
+  content: ">";
+
+  margin-left: 10px;
+}
+
+.breadcrumbs .crumb:last-child::after {
+  display: none;
+}
+
+/* Error 404 page styles */
+.error-404 a {
+  border-bottom: 2px solid var(--clr-primary);
+}
